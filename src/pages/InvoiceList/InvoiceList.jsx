@@ -1,5 +1,5 @@
 import useWindowWidth from "../../hooks/useWindowWidth";
-import FilterDropdown from "../../Components/FilterDropdown/FilterDropdown";
+import FilterDropdown from "../../Components/FilterDropdown/FilterDropdown"
 import { IconPlus, IconEmpty } from "../../Components/Icons";
 import InvoiceListItem from "./InvoiceListItem";
 import "./InvoiceList.css";
