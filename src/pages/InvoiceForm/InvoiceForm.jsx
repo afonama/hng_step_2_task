@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import useWindowWidth from "../../hooks/useWindowWidth";
-import FormField from "../../components/FormField/FormField";
-import SelectField from "../../components/SelectField/SelectField";
-import { IconDelete } from "../../components/Icons";
+import FormField from "../../Components/FormField/FormField";
+import SelectField from "../../Components/SelectField/SelectField";
+import { IconDelete } from "../../Components/Icons";
 import { generateId, addDays } from "../../utils/helpers";
 import { PAYMENT_TERMS_OPTIONS } from "../../utils/constants";
 import "./InvoiceForm.css";

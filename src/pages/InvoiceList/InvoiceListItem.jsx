@@ -1,6 +1,6 @@
 import useWindowWidth from "../../hooks/useWindowWidth";
-import StatusBadge from "../../components/StatusBadge/StatusBadge";
-import { IconArrowRight } from "../../components/Icons";
+import StatusBadge from "../../Components/StatusBadge/StatusBadge";
+import { IconArrowRight } from "../../Components/Icons";
 import { formatDate, formatCurrency } from "../../utils/helpers";
 import "./InvoiceListItem.css";
 
