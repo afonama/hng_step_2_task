@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import useWindowWidth from "./hooks/useWindowWidth";
-import Sidebar from "./components/Sidebar/Sidebar";
+import Sidebar from "./Components/Sidebar/Sidebar";
 import InvoiceList from "./pages/InvoiceList/InvoiceList";
 import InvoiceDetail from "./pages/InvoiceDetail/InvoiceDetail";
 import InvoiceForm from "./pages/InvoiceForm/InvoiceForm";
