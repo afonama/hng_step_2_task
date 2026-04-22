@@ -1,0 +1,327 @@
+/* ── Overlay ── */
+.form-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: var(--overlay);
+  z-index: 50;
+}
+
+/* ── Panel ── */
+.form-panel {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background-color: var(--form-bg);
+  z-index: 60;
+  overflow-y: auto;
+  border-top-right-radius: var(--radius-sidebar);
+  border-bottom-right-radius: var(--radius-sidebar);
+}
+
+.form-panel--desktop {
+  left: var(--sidebar-width-desktop);
+  width: min(720px, calc(100% - 103px));
+  padding: 56px 56px 190px;
+}
+
+.form-panel--mobile {
+  left: 0;
+  width: 100%;
+  padding: 32px 24px 190px;
+  border-radius: 0;
+}
+
+/* ── Title ── */
+.form-panel__title {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--text-primary);
+  margin-bottom: 48px;
+}
+
+.form-panel__title-hash {
+  color: var(--text-muted);
+}
+
+/* ── Section label ── */
+.form-panel__section {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+  color: var(--color-purple);
+  margin-bottom: 24px;
+}
+
+.form-panel__section--bill-to {
+  margin-top: 48px;
+}
+
+/* ── Field rows ── */
+.form-panel__row {
+  display: grid;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.form-panel__row--3col {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.form-panel__row--2col {
+  grid-template-columns: 1fr 1fr;
+}
+
+.form-panel__row--1col {
+  grid-template-columns: 1fr;
+}
+
+.form-panel__row--details {
+  margin-top: 48px;
+}
+
+/* ── Item list ── */
+.form-panel__items-title {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.38px;
+  color: #777F98;
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+
+.form-panel__items-header {
+  display: grid;
+  grid-template-columns: 214px 46px 100px 1fr 16px;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.form-panel__items-header-cell {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+/* ── Single item row (desktop) ── */
+.form-panel__item-row {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 18px;
+  align-items: center;
+}
+
+.form-panel__item-row--desktop {
+  grid-template-columns: 214px 46px 100px 1fr 16px;
+}
+
+.form-panel__item-row--mobile {
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.form-panel__item-fields-mobile {
+  display: grid;
+  grid-template-columns: 64px 100px 1fr 16px;
+  gap: 16px;
+  align-items: center;
+}
+
+/* ── Inline item inputs (no FormField wrapper) ── */
+.form-panel__item-input {
+  height: 48px;
+  padding: 0 20px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--input-border);
+  background-color: var(--input-bg);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-panel__item-input:focus {
+  border-color: var(--color-purple);
+}
+
+.form-panel__item-input--error {
+  border-color: var(--color-red);
+}
+
+.form-panel__item-input--qty {
+  padding: 0 8px;
+  text-align: center;
+}
+
+.form-panel__item-input--price {
+  padding: 0 12px;
+}
+
+/* ── Item total display ── */
+.form-panel__item-total-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-panel__item-total-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.form-panel__item-total {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  height: 48px;
+}
+
+/* ── Delete item button ── */
+.form-panel__item-delete {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  transition: opacity 0.2s;
+}
+
+.form-panel__item-delete--offset {
+  margin-top: 28px;
+}
+
+.form-panel__item-delete:hover path {
+  fill: var(--color-red);
+}
+
+/* ── Add item button ── */
+.form-panel__add-item {
+  width: 100%;
+  height: 48px;
+  border-radius: var(--radius-pill);
+  border: none;
+  cursor: pointer;
+  background-color: var(--btn-secondary-bg);
+  color: var(--text-muted);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: -0.25px;
+  margin-top: 8px;
+  transition: background-color 0.2s;
+}
+
+.form-panel__add-item:hover {
+  background-color: var(--btn-secondary-hover);
+}
+
+/* ── Error summary ── */
+.form-panel__errors {
+  margin-top: 32px;
+}
+
+.form-panel__error-line {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--color-red);
+  line-height: 15px;
+}
+
+/* ── Bottom action bar ── */
+.form-panel__actions {
+  position: fixed;
+  bottom: 0;
+  padding: 22px 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom-right-radius: var(--radius-sidebar);
+}
+
+.form-panel__actions--desktop {
+  left: var(--sidebar-width-desktop);
+  width: min(720px, calc(100% - 103px));
+  background: linear-gradient(to top, var(--form-bg) 80%, transparent);
+}
+
+.form-panel__actions--mobile {
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to top, var(--form-bg) 80%, transparent);
+  border-radius: 0;
+}
+
+.form-panel__actions--new {
+  justify-content: space-between;
+}
+
+.form-panel__actions--edit {
+  justify-content: flex-end;
+}
+
+.form-panel__actions-group {
+  display: flex;
+  gap: 8px;
+}
+
+/* ── Shared button styles ── */
+.form-btn--discard {
+  padding: 16px 24px;
+  border-radius: var(--radius-pill);
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 15px;
+  background-color: var(--btn-secondary-bg);
+  color: var(--text-muted);
+  transition: background-color 0.2s;
+}
+
+.form-btn--discard:hover {
+  background-color: var(--btn-secondary-hover);
+}
+
+.form-btn--draft {
+  padding: 16px 24px;
+  border-radius: var(--radius-pill);
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 15px;
+  background-color: var(--btn-draft-bg);
+  color: var(--btn-draft-color);
+  transition: background-color 0.2s;
+}
+
+.form-btn--draft:hover {
+  background-color: var(--btn-draft-hover);
+}
+
+.form-btn--save {
+  padding: 16px 24px;
+  border-radius: var(--radius-pill);
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 15px;
+  background-color: var(--color-purple);
+  color: var(--color-white);
+  transition: background-color 0.2s;
+}
+
+.form-btn--save:hover {
+  background-color: var(--color-purple-light);
+}
+
+/* ── Disabled date field ── */
+.form-panel__field--disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}

@@ -1,0 +1,109 @@
+.invoice-list {
+  max-width: 730px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 24px;
+}
+
+/* ── Header row ── */
+.invoice-list__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 65px;
+}
+
+.invoice-list__title {
+  font-weight: 700;
+  letter-spacing: -1.13px;
+  color: var(--text-primary);
+  line-height: 1.1;
+  font-size: 36px;
+}
+
+.invoice-list__title--mobile {
+  font-size: 24px;
+  letter-spacing: -0.75px;
+}
+
+.invoice-list__subtitle {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-top: 8px;
+}
+
+.invoice-list__controls {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.invoice-list__controls--mobile {
+  gap: 18px;
+}
+
+/* ── New Invoice button ── */
+.invoice-list__new-btn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 16px 8px 8px;
+  border-radius: var(--radius-pill);
+  border: none;
+  cursor: pointer;
+  background-color: var(--color-purple);
+  color: var(--color-white);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: -0.25px;
+  transition: background-color 0.2s;
+}
+
+.invoice-list__new-btn:hover {
+  background-color: var(--color-purple-light);
+}
+
+.invoice-list__new-btn-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Items container ── */
+.invoice-list__items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ── Empty state ── */
+.invoice-list__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.invoice-list__empty-title {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.63px;
+  color: var(--text-primary);
+  margin-top: 64px;
+}
+
+.invoice-list__empty-text {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-top: 24px;
+  max-width: 220px;
+  line-height: 15px;
+}

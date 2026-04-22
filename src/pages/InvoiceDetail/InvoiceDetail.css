@@ -1,0 +1,356 @@
+.detail {
+  max-width: 730px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 32px 24px;
+}
+
+@media (min-width: 768px) {
+  .detail {
+    padding: 32px 0;
+  }
+}
+
+/* ── Go back ── */
+.detail__back {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 32px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: -0.25px;
+  color: var(--text-primary);
+  transition: color 0.2s;
+}
+
+.detail__back:hover {
+  color: var(--text-muted);
+}
+
+/* ── Status bar ── */
+.detail__status-bar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: var(--card-bg);
+  border-radius: var(--radius-md);
+  padding: 20px 32px;
+  box-shadow: var(--card-shadow);
+  margin-bottom: 24px;
+}
+
+.detail__status-bar--mobile {
+  justify-content: space-between;
+}
+
+.detail__status-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.detail__status-actions {
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+}
+
+/* ── Action buttons ── */
+.detail__btn-edit {
+  padding: 16px 24px;
+  border-radius: var(--radius-pill);
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 15px;
+  background-color: var(--btn-secondary-bg);
+  color: var(--text-muted);
+  transition: background-color 0.2s;
+}
+
+.detail__btn-edit:hover {
+  background-color: var(--btn-secondary-hover);
+}
+
+.detail__btn-delete {
+  padding: 16px 24px;
+  border-radius: var(--radius-pill);
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 15px;
+  background-color: var(--color-red);
+  color: var(--color-white);
+  transition: background-color 0.2s;
+}
+
+.detail__btn-delete:hover {
+  background-color: var(--color-red-light);
+}
+
+.detail__btn-paid {
+  padding: 16px 24px;
+  border-radius: var(--radius-pill);
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 15px;
+  background-color: var(--color-purple);
+  color: var(--color-white);
+  transition: background-color 0.2s;
+}
+
+.detail__btn-paid:hover {
+  background-color: var(--color-purple-light);
+}
+
+/* ── Card body ── */
+.detail__card {
+  background-color: var(--card-bg);
+  border-radius: var(--radius-md);
+  padding: 48px;
+  box-shadow: var(--card-shadow);
+}
+
+.detail__card--mobile {
+  padding: 24px;
+}
+
+/* ── Top section ── */
+.detail__top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 21px;
+}
+
+.detail__invoice-id {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.8px;
+}
+
+.detail__invoice-hash {
+  color: var(--text-muted);
+}
+
+.detail__description {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.detail__sender-address {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  line-height: 18px;
+}
+
+.detail__sender-address--right {
+  text-align: right;
+}
+
+/* ── Info grid ── */
+.detail__info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.detail__info--mobile {
+  grid-template-columns: 1fr 1fr;
+}
+
+.detail__info-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.detail__info-value {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.detail__info-address {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  line-height: 18px;
+  margin-top: 8px;
+}
+
+.detail__info-gap {
+  margin-top: 32px;
+}
+
+.detail__info-span {
+  grid-column: 1 / -1;
+}
+
+/* ── Items table ── */
+.detail__items {
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  background-color: var(--invoice-item-bg);
+  padding: 32px;
+}
+
+.detail__items--mobile {
+  padding: 24px;
+}
+
+.detail__items-header {
+  display: grid;
+  grid-template-columns: 1fr auto auto auto;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.detail__items-header-cell {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.detail__items-header-cell--center {
+  text-align: center;
+  min-width: 40px;
+}
+
+.detail__items-header-cell--right {
+  text-align: right;
+  min-width: 80px;
+}
+
+.detail__items-header-cell--right-lg {
+  text-align: right;
+  min-width: 100px;
+}
+
+/* ── Single row ── */
+.detail__item-row {
+  display: grid;
+  grid-template-columns: 1fr auto auto auto;
+  gap: 16px;
+  align-items: center;
+}
+
+.detail__item-row:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.detail__item-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.detail__item-qty {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-align: center;
+  min-width: 40px;
+}
+
+.detail__item-price {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-align: right;
+  min-width: 80px;
+}
+
+.detail__item-total {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: right;
+  min-width: 100px;
+}
+
+/* ── Mobile item row ── */
+.detail__item-row-mobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detail__item-row-mobile:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.detail__item-mobile-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.detail__item-mobile-meta {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.detail__item-mobile-total {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* ── Grand total ── */
+.detail__total {
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  background-color: var(--invoice-total-bg);
+  padding: 24px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detail__total--mobile {
+  padding: 24px;
+}
+
+.detail__total-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-white);
+}
+
+.detail__total-amount {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-white);
+  letter-spacing: -0.5px;
+}
+
+/* ── Mobile bottom bar ── */
+.detail__mobile-actions {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--card-bg);
+  padding: 22px 24px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 -10px 10px -10px rgba(72, 84, 159, 0.1);
+}

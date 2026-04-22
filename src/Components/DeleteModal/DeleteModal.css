@@ -1,0 +1,76 @@
+.delete-modal__overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--overlay);
+}
+
+.delete-modal__box {
+  background-color: var(--card-bg);
+  border-radius: var(--radius-md);
+  padding: 48px;
+  max-width: 480px;
+  width: 90%;
+  box-shadow: var(--popup-shadow);
+}
+
+.delete-modal__title {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.delete-modal__text {
+  font-size: 13px;
+  line-height: 22px;
+  letter-spacing: -0.1px;
+  color: var(--text-secondary);
+}
+
+.delete-modal__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 22px;
+}
+
+.delete-modal__cancel-btn {
+  padding: 16px 24px;
+  border-radius: var(--radius-pill);
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: -0.25px;
+  background-color: var(--btn-secondary-bg);
+  color: var(--text-muted);
+  transition: background-color 0.2s;
+}
+
+.delete-modal__cancel-btn:hover {
+  background-color: var(--btn-secondary-hover);
+}
+
+.delete-modal__confirm-btn {
+  padding: 16px 24px;
+  border-radius: var(--radius-pill);
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: -0.25px;
+  background-color: var(--color-red);
+  color: var(--color-white);
+  transition: background-color 0.2s;
+}
+
+.delete-modal__confirm-btn:hover {
+  background-color: var(--color-red-light);
+}

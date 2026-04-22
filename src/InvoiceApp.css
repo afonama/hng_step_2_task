@@ -1,0 +1,25 @@
+.app {
+  min-height: 100vh;
+  background-color: var(--bg);
+  transition: background-color 0.3s;
+}
+
+.app__main {
+  min-height: 100vh;
+  padding-bottom: 80px;
+}
+
+.app__main--desktop {
+  margin-left: var(--sidebar-width-desktop);
+  padding-top: calc(0px + 32px);
+}
+
+.app__main--tablet {
+  margin-left: 0;
+  padding-top: calc(var(--topbar-height-tablet) + 32px);
+}
+
+.app__main--mobile {
+  margin-left: 0;
+  padding-top: calc(var(--topbar-height-mobile) + 32px);
+}

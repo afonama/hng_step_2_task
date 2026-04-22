@@ -1,0 +1,78 @@
+.invoice-item {
+  width: 100%;
+  display: grid;
+  align-items: center;
+  background-color: var(--card-bg);
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-family: inherit;
+  box-shadow: var(--card-shadow);
+  transition: border-color 0.2s;
+  text-align: left;
+}
+
+.invoice-item:hover {
+  border-color: var(--color-purple);
+}
+
+/* ── Desktop layout ── */
+.invoice-item--desktop {
+  grid-template-columns: auto 1fr auto auto auto auto;
+  gap: 16px;
+  padding: 16px 24px;
+}
+
+/* ── Mobile layout ── */
+.invoice-item--mobile {
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  padding: 24px;
+}
+
+.invoice-item__id {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.25px;
+  min-width: 70px;
+}
+
+.invoice-item__hash {
+  color: var(--text-muted);
+}
+
+.invoice-item__due {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.invoice-item__due--block {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.invoice-item__client {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  min-width: 100px;
+}
+
+.invoice-item__client--right {
+  text-align: right;
+}
+
+.invoice-item__total {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.25px;
+  min-width: 100px;
+  text-align: right;
+}
+
+.invoice-item__badge--end {
+  justify-self: end;
+}
